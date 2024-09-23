@@ -93,13 +93,14 @@ public class TP1_convertisseur_Batchourine {
                 messageResultat = "Choix invalide. Veuillez choisir un numéro entre 1 et 6.";
         
                 break;
+        }
         
-    
+     System.out.println(messageResultat);
                 
                 
         // Fermeture du scanner
                     scanner.close();
-        }
+        
         
     }
    
