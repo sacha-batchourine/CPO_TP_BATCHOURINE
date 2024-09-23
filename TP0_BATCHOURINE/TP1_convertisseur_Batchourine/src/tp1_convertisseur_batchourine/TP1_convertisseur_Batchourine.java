@@ -68,24 +68,37 @@ public class TP1_convertisseur_Batchourine {
                 break;
             case 4:
                 // Fahrenheit vers Celsius
+            {
                 double valeurReel = 0;
               resultat = CelciusVersFarenheit (valeurReel);
+             }
                 break;
             case 5:
+            {
                 // Kelvin vers Fahrenheit
-                
+                double valeurReel = 0;
+              resultat = KelvinVersFarenheit (valeurReel);
+            }
                 break;
             case 6:
+            {
                 // Fahrenheit vers Kelvin
+                double valeurReel = 0;
+              resultat = FarenheitVersKelvin (valeurReel);
                 
+            }
                 break;
             default:
                 // Choix invalide
                 messageResultat = "Choix invalide. Veuillez choisir un numéro entre 1 et 6.";
+        
                 break;
-        System.out.println(messageResultat);
+        
+    
+                
+                
         // Fermeture du scanner
-       scanner.close();
+                    scanner.close();
         }
         
     }
