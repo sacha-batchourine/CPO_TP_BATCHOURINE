@@ -96,4 +96,4 @@ public class TP2_convertisseurObjet_Batchourine {
 
         scanner.close();  // Fermeture du scanner
     }
-}2
+}
