@@ -4,9 +4,12 @@
  */
 package tp3_heroic_fantasy_batchourine;
 
-import arme.Arme;
-import arme.Baton;
-import arme.Epee;
+import Arme.Baton;
+import Arme.Epee;
+import Personnage.Magicien;
+import Personnage.Guerrier;
+import Personnage.Personnage;
+import Personnage.*;
 import java.util.ArrayList;
 
 /**
@@ -20,28 +23,29 @@ public class TP3_Heroic_Fantasy_Batchourine {
      */
    
 
+
 public class Main {
     public static void main(String[] args) {
-        // Création des épées et des bâtons
-        Epee epee1 = new Epee("Excalibur", 7, 5);
-        Epee epee2 = new Epee("Durandal", 4, 7);
-        Baton baton1 = new Baton("Chêne", 4, 5);
-        Baton baton2 = new Baton("Charme", 5, 6);
+        Guerrier guerrier1 = new Guerrier("Conan", 80, true);
+        Guerrier guerrier2 = new Guerrier("Lannister", 70, false);
+        Magicien magicien1 = new Magicien("Gandalf", 65, true);
+        Magicien magicien2 = new Magicien("Garcimore", 44, false);
 
-        // Création du tableau dynamique d'armes
-        ArrayList<Arme> armes = new ArrayList<>();
+        System.out.println("Nombre total de personnages : " + Personnage.getNombrePersonnages());
+        System.out.println("Nombre de guerriers : " + Personnage.getNombreGuerriers());
+        System.out.println("Nombre de magiciens : " + Personnage.getNombreMagiciens());
 
-        // Ajout des armes dans le tableau dynamique
-        armes.add(epee1);
-        armes.add(epee2);
-        armes.add(baton1);
-        armes.add(baton2);
+        guerrier1 = null;
+        guerrier2 = null;
+        magicien1 = null;
+        magicien2 = null;
 
-        // Affichage des caractéristiques de chaque arme
-        for (int i = 0; i < armes.size(); i++) {
-            System.out.println(armes.get(i));
-        }
+        // Le garbage collector est forcé (pour démonstration uniquement)
+        System.gc();
+
+        System.out.println("Nombre total de personnages (après suppression) : " + Personnage.getNombrePersonnages());
+        System.out.println("Nombre de guerriers (après suppression) : " + Personnage.getNombreGuerriers());
+        System.out.println("Nombre de magiciens (après suppression) : " + Personnage.getNombreMagiciens());
     }
 }
-    
 }

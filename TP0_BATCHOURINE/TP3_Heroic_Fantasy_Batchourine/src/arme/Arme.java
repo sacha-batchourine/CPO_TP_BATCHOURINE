@@ -1,4 +1,4 @@
-package arme;
+package Arme;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
